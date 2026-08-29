@@ -10,11 +10,11 @@ primes = [2,3,5,7,11,13]
 def isPrime(number):
     if number in primes:
         return True
+    if number <= 0:
+        return False
     lowerBound = math.sqrt(number);
-    for prime in primes:
-        if prime > lowerBound:
-            break
-        if number%prime == 0:
+    for divisor in range(2,int(lowerBound) + 1):
+        if number%divisor == 0:
             return False
     primes.append(number)
     return True
