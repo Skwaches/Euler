@@ -1,2 +1,3 @@
 # Euler
-My answers to project Euler questions
+In an attempt to improve my *employability*.  
+I am doing a bunch of questions from [Project Euler](https://projecteuler.net/).
