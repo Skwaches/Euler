@@ -1,0 +1,5 @@
+Getting bounds was most of the work.
+Once identified, a naive approach run fast enough.
+I have also added a makefile to simplify
+building C++ files.
+The makefile still needs fixing
