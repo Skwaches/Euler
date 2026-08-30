@@ -1,0 +1,12 @@
+Question 31 is quite the experience.
+My current solution is far from optimised.
+The main improvement ,I believe,
+would be to use the number of ways to make a specific pattern
+instead of appending the pattern and checking for duplicates
+If number of ways to make n is f(n), then
+Example: Number of ways to make 4 would be
+    = f(1) * f(3) + f(2) * f(2) + f(3) * f(1)
+    It might be clear that the first and last terms are identical
+    It shouldn't be double counted.
+    These kind of duplicates were my main fear
+    But hey, having a list of all possibilities is pretty neat no?
