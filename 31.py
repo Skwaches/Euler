@@ -22,6 +22,7 @@ def compress(arrangement:list[int]):
 # It caches the retrieved list and retrieves it when required.
 # Since we are only asked for the number of ways to make the amount,
 # returning the entire list of ways is likely unoptimised
+# It takes a shit ton of time to solve
 def collect(denominations, amount) -> list[list[int]]:
     if amount in cache:
         return cache[amount]
@@ -52,11 +53,9 @@ def collect(denominations, amount) -> list[list[int]]:
                 saved.append(compressed)
                 collected.append(coped)
     cache[amount] = collected
-    print(amount,len(collected))
     return collected
-
             
         
 if __name__ == "__main__":
     denominations = [1, 2, 5, 10, 20, 50, 100, 200]
-    collect(denominations,200)
+    print(len(collect(denominations,200)))
