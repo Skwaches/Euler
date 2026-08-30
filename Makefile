@@ -1,13 +1,20 @@
-files=$(wildcard *.cpp)
 BUILD=build
+FILES=$(wildcard *.cpp)
+OUTPUTS=$(FILES:%.cpp=$(BUILD)/%)
 
+.PHONY: $(Q)
+$(Q): $(BUILD)/$(Q)
 
-%: %.cpp $(BUILD)
-	g++ -O3 $< -o $(BUILD)/$@
-	./$(BUILD)/$@
+all: $(OUTPUTS)
 
 $(BUILD):
 	mkdir -p $(BUILD)
 
-clean:
-	rm -f $(BUILD)/$(QUE)
+$(BUILD)/%: %.cpp $(BUILD)
+	g++ -O3 $< -o $@
+
+run: $(BUILD)/$(Q) 
+	./$(BUILD)/$(Q)
+	
+clean: 
+	rm -r $(BUILD)/$(Q)

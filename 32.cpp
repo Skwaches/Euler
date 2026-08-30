@@ -89,7 +89,6 @@ int main(int argc, char** argv){
 			int num2 = std::stoi(arrangements[i].substr(a,5-a));
 			if (num1 * num2 == result){
 				seen.insert(result);
-				std::cout << num1 << " x "<< num2  << " = " << result << std::endl;
 				total += result;
 			}
 		}
@@ -97,5 +96,3 @@ int main(int argc, char** argv){
 	std::cout << total << std::endl;
 	return 0;
 }
-
-
