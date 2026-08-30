@@ -17,4 +17,4 @@ run: $(BUILD)/$(Q)
 	./$(BUILD)/$(Q)
 	
 clean: 
-	rm -r $(BUILD)/$(Q)
+	rm -rf $(BUILD)/$(Q)
