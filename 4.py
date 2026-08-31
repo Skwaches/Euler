@@ -9,8 +9,9 @@ two 3-digit numbers.
 """
 
 def isPalindrome(forward):
-    text = str(forward);
-    return text[::-1] == text 
+    if not isinstance(forward,str):
+        forward = str(forward);
+    return forward[::-1] == forward 
 
 if __name__ == "__main__":
     groups = []
