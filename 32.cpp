@@ -53,7 +53,7 @@
 #include <vector>
 #include <string>
 #include <iostream>
-void pandogical(std::vector<std::string> set, std::vector<std::string>& items, int choose = -1, std::string built = ""){
+void permutate(std::vector<std::string> set, std::vector<std::string>& items, int choose = -1, std::string built = ""){
 	for(int a = 0;a < set.size();a++){
 		std::string made = built + set[a];
 		std::vector<std::string> remaining = set;
@@ -63,7 +63,7 @@ void pandogical(std::vector<std::string> set, std::vector<std::string>& items, i
 			items.push_back(made);
 			continue;
 		}
-		pandogical(remaining, items, choose, made);
+		permutate(remaining, items, choose, made);
 	}
 }
 
@@ -74,7 +74,7 @@ int main(int argc, char** argv){
 
 	// Load all the arrangements
 	std::vector<std::string> arrangements;
-	pandogical(characters, arrangements);
+	permutate(characters, arrangements);
 
 	int total = 0;
 	std::set<int> seen; 

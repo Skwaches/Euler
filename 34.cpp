@@ -15,7 +15,7 @@
 
 #include <iostream>
 #include <string>
-int cache[10];
+static int cache[10];
 void initFactorial(){
 	cache[0] = 1;
 	for (int i = 1;i < 10;i++){
